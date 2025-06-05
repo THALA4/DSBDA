@@ -1,4 +1,12 @@
 -- Start Hive
+GO TO hadoop
+  sudo su USER_NAME
+
+GO TO hadoop/bin
+start-dfs.sh
+start-yarn.sh
+jps
+
 cd /usr/local/hive/bin
 ./hive
 
