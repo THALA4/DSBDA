@@ -14,17 +14,9 @@ df.head()
 subset_df = df[['Type', 'Category', 'Lifetime Post Impressions by people who have liked your Page']]
 Photo_data = df[df['Type'] == 'Photo']
 
-df1 = pd.DataFrame({
-    'Type': ['Photo', 'Status', 'Photo'],
-    'Reach': ['3423','2352','3463']
-})
 
-df2 = pd.DataFrame({
-    'Type': ['Photo', 'Status'],
-    'Avg_Engagement': ['3423','2352']
-})
 
-merged_df = pd.merge(df1,df2, on='Type')
+merged_df = pd.merge(subset_df,Photo_data, on='Type')
 
 merged_df.head()
 
